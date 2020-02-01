@@ -14,6 +14,9 @@
 		BA7BCC6E23E46764004CA9AB /* FrostAssignment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA7BCC6C23E46764004CA9AB /* FrostAssignment.xcdatamodeld */; };
 		BA7BCC7023E4676A004CA9AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA7BCC6F23E4676A004CA9AB /* Assets.xcassets */; };
 		BA7BCC7323E4676A004CA9AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA7BCC7123E4676A004CA9AB /* LaunchScreen.storyboard */; };
+		BA7BCC7B23E4897F004CA9AB /* AddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BCC7A23E4897F004CA9AB /* AddVC.swift */; };
+		BA7BCC7D23E496A3004CA9AB /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BCC7C23E496A3004CA9AB /* Services.swift */; };
+		BA7BCC8123E5B0A0004CA9AB /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BCC8023E5B0A0004CA9AB /* NoteCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		BA7BCC6F23E4676A004CA9AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA7BCC7223E4676A004CA9AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA7BCC7423E4676A004CA9AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA7BCC7A23E4897F004CA9AB /* AddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVC.swift; sourceTree = "<group>"; };
+		BA7BCC7C23E496A3004CA9AB /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		BA7BCC8023E5B0A0004CA9AB /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +66,9 @@
 			children = (
 				BA7BCC6323E46764004CA9AB /* AppDelegate.swift */,
 				BA7BCC6523E46764004CA9AB /* SceneDelegate.swift */,
-				BA7BCC6723E46764004CA9AB /* ViewController.swift */,
+				BA7BCC8223E5C682004CA9AB /* View */,
+				BA7BCC8323E5C693004CA9AB /* Controller */,
+				BA7BCC8423E5C6A0004CA9AB /* Services */,
 				BA7BCC6923E46764004CA9AB /* Main.storyboard */,
 				BA7BCC6F23E4676A004CA9AB /* Assets.xcassets */,
 				BA7BCC7123E4676A004CA9AB /* LaunchScreen.storyboard */,
@@ -68,6 +76,31 @@
 				BA7BCC6C23E46764004CA9AB /* FrostAssignment.xcdatamodeld */,
 			);
 			path = FrostAssignment;
+			sourceTree = "<group>";
+		};
+		BA7BCC8223E5C682004CA9AB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BA7BCC8023E5B0A0004CA9AB /* NoteCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BA7BCC8323E5C693004CA9AB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BA7BCC6723E46764004CA9AB /* ViewController.swift */,
+				BA7BCC7A23E4897F004CA9AB /* AddVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BA7BCC8423E5C6A0004CA9AB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BA7BCC7C23E496A3004CA9AB /* Services.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +175,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA7BCC6823E46764004CA9AB /* ViewController.swift in Sources */,
+				BA7BCC7D23E496A3004CA9AB /* Services.swift in Sources */,
 				BA7BCC6423E46764004CA9AB /* AppDelegate.swift in Sources */,
 				BA7BCC6623E46764004CA9AB /* SceneDelegate.swift in Sources */,
 				BA7BCC6E23E46764004CA9AB /* FrostAssignment.xcdatamodeld in Sources */,
+				BA7BCC8123E5B0A0004CA9AB /* NoteCell.swift in Sources */,
+				BA7BCC7B23E4897F004CA9AB /* AddVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +256,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -274,7 +310,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

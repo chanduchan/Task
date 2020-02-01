@@ -27,7 +27,8 @@ class AddVC: UIViewController {
     // MARK: - view life cycle starts from here
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        titleTXt.delegate = self
+        descriptionTXt.delegate = self
         self.hideKeyboardWhenTappedAround()
         cancelBtn.clipsToBounds = true
         cancelBtn.layer.borderWidth = 1
@@ -118,6 +119,12 @@ extension AddVC:UIImagePickerControllerDelegate & UINavigationControllerDelegate
 
 }
 
+extension AddVC:UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+}
 // MARK: - keyboard hiding extension
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {

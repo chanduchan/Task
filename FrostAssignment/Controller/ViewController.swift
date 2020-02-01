@@ -16,6 +16,9 @@ class ViewController: UIViewController {
     
     
     
+    
+    
+    
     @IBOutlet weak var tableviewObj: UITableView!
     @IBOutlet weak var searchBarObj: UISearchBar!
     @IBOutlet weak var sortBarButton: UIBarButtonItem!
@@ -42,7 +45,6 @@ class ViewController: UIViewController {
                 print(err)
             // show alert
             case .success(let dat):
-                print(dat)
                 self?.notes = dat
                 self?.tableviewObj.reloadData()
             }
@@ -61,6 +63,7 @@ class ViewController: UIViewController {
         present(myvc, animated: true, completion: nil)
     }
     
+    // MARK: - Adding Sorted button action
     @IBAction func SortByAction(_ sender: UIBarButtonItem) {
         
         // create an actionSheet
@@ -98,7 +101,7 @@ class ViewController: UIViewController {
         if let popoverController = actionSheetController.popoverPresentationController {
             popoverController.barButtonItem = sender
         }
-        present(actionSheetController, animated: true, completion: nil)   // doesn't work for iPad
+        present(actionSheetController, animated: true, completion: nil)
     }
     
     
